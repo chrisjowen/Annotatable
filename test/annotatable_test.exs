@@ -32,7 +32,11 @@ defmodule AnnotatableTest do
   end
 
   test "Example should not contain annoations in no annotations on method" do
-    IO.inspect(Example.annotations)
     assert Example.annotations |> Map.has_key?(:no_annotation_method) == false
   end
+
+  test "Example get methods annotated with bat" do
+    assert Example.annotated_with(:bar) == [:bar_method, :foo_bar_method]
+  end
+
 end

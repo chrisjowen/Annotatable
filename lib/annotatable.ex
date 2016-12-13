@@ -36,6 +36,15 @@ defmodule Annotatable do
       def annotations do
          @annotations
       end
+
+      def annotated_with(annotation) do
+        methods = @annotations |> Map.keys
+        methods |> Enum.filter fn method ->
+           Map.get(@annotations, method, [])
+            |> Enum.map(fn a -> a.annotation end)
+            |> Enum.member?(annotation)
+        end
+      end
     end
 
   end

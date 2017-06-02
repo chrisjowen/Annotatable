@@ -1,8 +1,8 @@
 # Annotatable
 
-Add simple annotations to elixir methods which can be used later to do some funkiness
+Add simple annotations to elixir methods which can be used later to do some funkiness see https://medium.com/@cowen/annotations-in-elixir-450015ecdd97
 
-#Usage
+## Usage
 
 ```
 defmodule Example do
